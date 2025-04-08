@@ -11,17 +11,17 @@ import RealmSwift
 
 class TaskDetailViewController: UIViewController {
     
-    // MARK: - Properties
-    let realm = try! Realm()
-    var selectedCategory: Category?
-    var taskToEdit: Item?
-    
     // MARK: - Outlets
     @IBOutlet weak var taskNameTextField: UITextField!
     @IBOutlet weak var prioritySegmentControl: UISegmentedControl!
     @IBOutlet weak var dueDatePicker: UIDatePicker!
     @IBOutlet weak var timeEstimateTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
+    
+    // MARK: - Properties
+    let realm = try! Realm()
+    var selectedCategory: Category?
+    var taskToEdit: Item?
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -35,9 +35,12 @@ class TaskDetailViewController: UIViewController {
     
     // MARK: - UI Setup
     func setupUI() {
-        timeEstimateTextField.keyboardType = .numberPad
+        // Configure the date picker
         dueDatePicker.datePickerMode = .dateAndTime
         dueDatePicker.minimumDate = Date()
+        
+        // Set up keyboard handling
+        setupKeyboardDismissal()
     }
     
     func populateTaskData(_ task: Item) {
@@ -47,6 +50,15 @@ class TaskDetailViewController: UIViewController {
             dueDatePicker.date = dueDate
         }
         timeEstimateTextField.text = "\(task.timeEstimate)"
+    }
+    
+    func setupKeyboardDismissal() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     // MARK: - Actions

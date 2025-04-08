@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1644CE1F2AF4E1D100F4B5CE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1644CE1E2AF4E1D100F4B5CE /* Item.swift */; };
 		1644CE212AF4E24600F4B5CE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1644CE202AF4E24600F4B5CE /* Category.swift */; };
+		165B57CE2DA50CB50055AB18 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165B57CD2DA50CB50055AB18 /* TaskDetailViewController.swift */; };
 		167DB7482AF7D1D400349237 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167DB7472AF7D1D400349237 /* SwipeTableViewController.swift */; };
 		16B0CD432AE00D3B000FAF97 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B0CD422AE00D3B000FAF97 /* CategoryViewController.swift */; };
 		659352223BBE327F2BCC8DBB /* Pods_Todoey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A3C2254DF4EF4DF8E50671 /* Pods_Todoey.framework */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		1644CE1E2AF4E1D100F4B5CE /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1644CE202AF4E24600F4B5CE /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		165B57CD2DA50CB50055AB18 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		167DB7472AF7D1D400349237 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		16A3C2254DF4EF4DF8E50671 /* Pods_Todoey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todoey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16B0CD422AE00D3B000FAF97 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 				16B0CD422AE00D3B000FAF97 /* CategoryViewController.swift */,
 				EB2BE4FD239524DB00FB933B /* TodoListViewController.swift */,
 				167DB7472AF7D1D400349237 /* SwipeTableViewController.swift */,
+				165B57CD2DA50CB50055AB18 /* TaskDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				165B57CE2DA50CB50055AB18 /* TaskDetailViewController.swift in Sources */,
 				1644CE1F2AF4E1D100F4B5CE /* Item.swift in Sources */,
 				16B0CD432AE00D3B000FAF97 /* CategoryViewController.swift in Sources */,
 				EB2BE4FE239524DB00FB933B /* TodoListViewController.swift in Sources */,
